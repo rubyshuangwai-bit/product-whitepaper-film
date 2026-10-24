@@ -20,7 +20,7 @@
 ## 生成可分享的包
 
 ```bash
-python3 scripts/package.py --out /absolute/path/product-whitepaper-film-0.4.7.zip
+python3 scripts/package.py --out /absolute/path/product-whitepaper-film-0.4.8.zip
 ```
 
 从当前整个Skill目录生成候选包；输出已存在则停止。打包器限制文件类型并检查常见个人路径/密钥模式，排除运行配置、音视频、模型和生成目录。显式公开文件清单、邮箱/手机号/常见凭据扫描和固定归档时间不能替代逐文件人工核查；仍需查看归档清单。保留随包的LICENSE、THIRD_PARTY_NOTICES和来源说明。
