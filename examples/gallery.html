@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<script src="assets/gsap.min.js"></script><script src="assets/pwf-motion.js"></script>
+<style>
+@font-face{font-family:Film;src:url(assets/fonts/sans-400.woff2);font-weight:400}@font-face{font-family:Film;src:url(assets/fonts/sans-700.woff2);font-weight:700}
+*{box-sizing:border-box;margin:0}body,#root{width:1920px;height:1080px;overflow:hidden;background:#f2f6fc;font-family:Film,sans-serif;color:#183459}#root{position:relative}.scene,.cam{position:absolute;inset:0}.scene{opacity:0}.title{position:absolute;left:140px;top:125px;font-size:72px;font-weight:700}.sub{position:absolute;left:145px;top:230px;font-size:31px;color:#526c8d}.node{position:absolute;border:2px solid #b8cdeb;background:white;border-radius:22px;padding:30px;font-size:38px;text-align:center;opacity:0}.node small{display:block;margin-top:14px;font-size:29px;color:#526c8d}.platform{background:#dce9fc;color:#1b5cb6}.wire{position:absolute;inset:0;pointer-events:none}.wire path{fill:none;stroke:#2b6ed4;stroke-width:5;opacity:0}.wire circle{fill:#2b6ed4;opacity:0}.layer{position:absolute;left:140px;width:1640px;height:140px;display:flex;align-items:center;gap:20px;background:white;border:2px solid #c3d5ef;border-radius:22px;padding:25px 35px;opacity:0}.layer b{width:420px;font-size:38px}.cell{width:300px;font-size:35px;text-align:center;color:#225aa7}.mock{position:absolute;left:790px;top:310px;width:980px;height:500px;background:white;border:2px solid #bdcfe7;border-radius:20px;opacity:0;overflow:hidden}.mock .sidebar{position:absolute;left:0;top:0;width:220px;height:100%;background:#e9eff8;padding:35px;font-size:33px;line-height:2.5}.mock .heading{position:absolute;left:270px;top:60px;font-size:44px}.mock .line{position:absolute;left:270px;height:13px;background:#cedbea;border-radius:5px;width:540px}.focus{position:absolute;left:810px;top:350px;width:180px;height:75px;border:4px solid #2b6ed4;border-radius:12px;opacity:0}.word{position:absolute;left:145px;top:400px;font-size:47px;opacity:0}.demo{position:absolute;left:140px;bottom:85px;font-size:29px;color:#526c8d}.tile{position:absolute;top:355px;width:460px;height:230px;border:2px solid #b8cdeb;border-radius:22px;background:white;text-align:center;padding:55px 20px;font-size:42px;opacity:0}.tile small{display:block;font-size:28px;color:#526c8d;margin-top:15px}
+</style></head><body>
+<div id="root" data-composition-id="pwf-gallery" data-start="0" data-duration="16" data-width="1920" data-height="1080">
+<div id="access" class="scene clip" data-start="0" data-duration="4"><div class="cam">
+<div class="title">多份资料，集中查阅</div><div class="sub">资料逐个展示，再建立汇总与查阅关系</div>
+<div id="public" class="node" style="left:140px;top:345px;width:630px;height:130px">资料集合一</div><div id="private" class="node" style="left:140px;top:570px;width:630px;height:130px">资料集合二</div>
+<div id="api" class="node platform" style="left:1040px;top:460px;width:730px;height:150px">资料汇总<small>汇总后查阅</small></div>
+<svg class="wire" viewBox="0 0 1920 1080"><path id="p1" d="M770 410 H900 V520 H1040"/><path id="p2" d="M770 635 H900 V550 H1040"/><circle id="flow" r="8"/></svg>
+</div></div>
+<div id="layers" class="scene clip" data-start="4" data-duration="4"><div class="cam"><div class="title">内容层次，逐步展开</div><div class="sub">按讲解建立分类、摘要与出处层次</div>
+<div id="l1" class="layer" style="top:330px"><b>资料分类</b><div class="cell">说明</div><div class="cell">指南</div><div class="cell">问答</div></div>
+<div id="l2" class="layer" style="top:540px"><b>内容摘要</b><div class="cell" style="width:940px">条目整理与上下文说明</div></div>
+<div id="l3" class="layer" style="top:750px"><b>来源记录</b><div class="cell">章节</div><div class="cell">页码</div><div class="cell">原文</div></div>
+<svg class="wire" viewBox="0 0 1920 1080"><path id="vertical" d="M1200 470 V540 M1200 680 V750"/></svg>
+</div></div>
+<div id="focus-scene" class="scene clip" data-start="8" data-duration="4"><div class="cam"><div class="title">截图稳定，重点跟随讲解</div><div class="sub">描边属于讲解层，不代表实机点击</div><div id="word1" class="word">查看记录</div><div id="word2" class="word" style="top:530px">整理待办</div>
+<div id="mock" class="mock"><div class="sidebar">记录<br>待办<br>设置</div><div class="heading">示意界面</div><div class="line" style="top:180px"></div><div class="line" style="top:235px;width:400px"></div><div class="line" style="top:290px;width:490px"></div></div><div id="f1" class="focus"></div><div id="f2" class="focus" style="top:435px"></div>
+</div></div>
+<div id="apps" class="scene clip" data-start="12" data-duration="4"><div class="cam"><div class="title">条目归位，资料建立关联</div><div class="sub">同一元素持续保留，完成从单体到关系的解释</div>
+<div id="app1" class="tile" style="left:140px">条目一<small>资料条目</small></div><div id="app2" class="tile" style="left:730px">条目二<small>资料条目</small></div><div id="app3" class="tile" style="left:1320px">条目三<small>资料条目</small></div>
+<div id="base" class="node platform" style="left:440px;top:760px;width:1040px;height:120px">资料工作区</div><svg class="wire" viewBox="0 0 1920 1080"><path id="b1" d="M960 760 V670 H370 V610"/><path id="b2" d="M960 760 V610"/><path id="b3" d="M960 760 V670 H1550 V610"/><circle id="support" r="8"/></svg>
+</div></div>
+<div class="demo">动画模板演示 · 通用示意内容，非真实产品功能声明</div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});window.__timelines=window.__timelines||{};
+['access','layers','focus-scene','apps'].forEach((id,i)=>{tl.set('#'+id,{opacity:1},i*4);if(i<3)tl.set('#'+id,{opacity:0},i*4+3.99);});
+PWF.steps(tl,['#public','#private','#api'],[.15,.75,1.4]);PWF.draw(tl,'#p1',1.8,.65);PWF.draw(tl,'#p2',2.1,.65);PWF.signal(tl,'#flow',[[770,410],[900,410],[900,520],[1040,520]],2.7,.25);
+PWF.steps(tl,['#l1','#l2','#l3'],[4.15,4.85,5.55]);PWF.draw(tl,'#vertical',6.4,.8);tl.to('#l2',{borderColor:'#2869cc',backgroundColor:'#e0ecff',duration:.5},6.8);
+PWF.reveal(tl,'#mock',8.1);PWF.reveal(tl,'#word1',8.5);PWF.focus(tl,'#f1',8.8,9.6);PWF.reveal(tl,'#word2',9.7);PWF.focus(tl,'#f2',10,11.5);
+PWF.reveal(tl,'#app3',12.1);gsap.set('#app3',{scale:1.4,x:-220,y:20,transformOrigin:'50% 50%'});PWF.reflow(tl,'#app3',{scale:1,x:0,y:0},12.6,.7);PWF.reveal(tl,'#app1',12.9);PWF.reveal(tl,'#app2',13.1);PWF.reveal(tl,'#base',13.35);['#b1','#b2','#b3'].forEach((p,i)=>PWF.draw(tl,p,13.9+i*.12,.7));PWF.signal(tl,'#support',[[960,760],[960,670],[1550,670],[1550,610]],14.7,.25);
+tl.to('#base',{borderColor:'#2869cc',duration:.2},15.75);tl.seek(0);window.__timelines['pwf-gallery']=tl;
+</script></body></html>

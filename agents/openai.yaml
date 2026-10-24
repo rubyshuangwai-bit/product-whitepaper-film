@@ -1,0 +1,4 @@
+interface:
+  display_name: "白皮书产品宣传片"
+  short_description: "白皮书转产品宣传片：资料溯源、分镜动画、本地配音与渲染"
+  default_prompt: "使用 $product-whitepaper-film，把这份产品白皮书做成客户看得懂的宣传视频，先对齐内容并验证一个完整分镜。"
